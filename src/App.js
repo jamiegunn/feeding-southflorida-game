@@ -1,5 +1,5 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
 import React from "react";
 import {
   BrowserRouter as Router,
@@ -7,10 +7,10 @@ import {
   Route,
   Link,
   useRouteMatch,
-  useParams
+  useParams,
 } from "react-router-dom";
 
-import HomePage from './components/HomePage'
+import HomePage from "./components/HomePage";
 
 export default function App() {
   return (
@@ -44,7 +44,6 @@ export default function App() {
   );
 }
 
-
 function About() {
   return <h2>About</h2>;
 }
@@ -61,9 +60,7 @@ function Topics() {
           <Link to={`${match.url}/components`}>Components</Link>
         </li>
         <li>
-          <Link to={`${match.url}/props-v-state`}>
-            Props v. State
-          </Link>
+          <Link to={`${match.url}/props-v-state`}>Props v. State</Link>
         </li>
       </ul>
 

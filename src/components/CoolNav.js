@@ -1,10 +1,8 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 class CoolNav extends Component {
   render() {
-    return (
-        <div>Cool Nav</div>
-    );
+    return <div>Cool Nav</div>;
   }
 }
 

@@ -35,7 +35,7 @@ class StepOne extends Component {
                             this.props.goToStep(2);
                         }}>Button 1</Button>&nbsp; 
                         <Button id = "StepOneItem1">Button 2</Button>
-                        <UncontrolledPopover placement="bottom" target="StepOneItem1">
+                        <UncontrolledPopover placement="bottom" trigger="focus" placement="right"						target="StepOneItem1">
                             <PopoverHeader>Oak Wood Chips - 20lbs</PopoverHeader>
                             <PopoverBody><table>
 <tbody><tr><th colspan="4" class="NF-main-header">Nutrition Facts</th></tr>

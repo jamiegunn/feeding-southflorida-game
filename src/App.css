@@ -28,6 +28,12 @@
 	text-align: center!important;
 }
 
+.card-title {
+	font-weight: bolder;
+	color: #436026;
+
+}
+
 .footerBottomBottomColor {
 	background-color: #BF5B00!important;
 }

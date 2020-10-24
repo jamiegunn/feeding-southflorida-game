@@ -14,8 +14,8 @@ class ModalPage extends Component {
 
     render() {      
 
-        console.log(this.props.adultsModal);
-        console.log(this.props.kidsModal);
+        //console.log(this.props.adultsModal);
+        //console.log(this.props.kidsModal);
 
         return  (
             <div style={{height:100, width:100}}>

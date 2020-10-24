@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
-import { Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, Button, Container, Row, Col
-} from 'reactstrap';
+
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
 class MapPage extends Component {

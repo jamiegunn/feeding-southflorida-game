@@ -106,7 +106,7 @@ class HomePage extends Component {
                             <div className="border" style={{ height: '100%', marginTop: 20 }}>
                                 <CardBody>
                                     <CardTitle>Did you know?</CardTitle>
-                                    <a href ="https://feedingsouthflorida.org/donate-now/" target = "_blank">Donate Now!</a>
+                                    <a href ="https://feedingsouthflorida.org/donate-now/" target = "_blank" class="btn">Donate Now!</a>
                                 </CardBody>
                             </div>
                         </Col>

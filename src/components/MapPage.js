@@ -19,6 +19,7 @@ class MapPage extends Component {
           // Important! Always set the container height explicitly
           <div style={{ height: '100vh', width: '100%' }}>
             <GoogleMapReact
+            bootstrapURLKeys={{ key: "AIzaSyAYvh2WDpzG5PImRfO-9k-gChzC-1C12kA" }}
               defaultCenter={this.props.center}
               defaultZoom={this.props.zoom}
             >

@@ -2,9 +2,18 @@
   text-align: center;
 }
 
+body {
+	background-color: #FFF;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+.nav-link {
+	font-weight: bolder;
+	color: #436026!important;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -48,6 +57,9 @@ width: 100%;
 
 .navbar-collapse {
 	margin-top: auto;
+}
+.navbar {
+	    box-shadow: rgba(255, 255, 255, 0.15) 0px 1px 0px inset, rgba(0, 0, 0, 0.075) 0px 1px 5px;
 }
 
 .App-header {

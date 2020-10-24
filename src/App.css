@@ -13,6 +13,18 @@
   }
 }
 
+.imageHalf{
+width: 100%;	
+}
+
+.navbar-brand {
+	width: 220px;
+}
+
+.navbar-collapse {
+	margin-top: auto;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;

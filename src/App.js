@@ -1,7 +1,8 @@
 import logo from "./logo.svg";
 import "./App.css";
+import "./images/fsf-header-logo@2x.png";
 import React from "react";
-import MapPage from './components/MapPage'
+import MapPage from './components/MapPage';
 import {
   BrowserRouter as Router,
   Switch,
@@ -16,10 +17,10 @@ import HomePage from "./components/HomePage";
 export default function App() {
   return (
     <Router>
-      <div className="container-fluid">
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
-          <a className="navbar-brand" href="/">
-            Feeding South Florida
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <a class="navbar-brand" href="/">
+            <img class="imageHalf" src="http://localhost:3000/images/fsf-header-logo@2x.png"/>
           </a>
           <button
             className="navbar-toggler"

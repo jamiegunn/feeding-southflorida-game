@@ -13,6 +13,14 @@
   }
 }
 
+.imageHalf{
+width: 50%;	
+}
+
+.navbar-brand {
+#background-image: url(http://localhost:3000/images/fsf-header-logo@2x.png)!important;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;

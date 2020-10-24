@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import "./images/fsf-header-logo@2x.png";
 import React from "react";
@@ -7,9 +6,7 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link,
-  useRouteMatch,
-  useParams,
+  Link
 } from "react-router-dom";
 
 import HomePage from "./components/HomePage";
@@ -17,10 +14,10 @@ import HomePage from "./components/HomePage";
 export default function App() {
   return (
     <Router>
-      <div class="container-fluid">
-        <nav class="navbar navbar-expand-lg navbar-light">
-          <a class="navbar-brand" href="/">
-            <img class="imageHalf" src="http://localhost:3000/images/fsf-header-logo@2x.png"/>
+      <div className="container-fluid">
+        <nav className="navbar navbar-expand-lg navbar-light">
+          <a className="navbar-brand" href="/">
+            <img className="imageHalf" src="http://localhost:3000/images/fsf-header-logo@2x.png"/>
           </a>
           <button
             className="navbar-toggler"
@@ -31,7 +28,7 @@ export default function App() {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon" />
+            <span className="navbar-toggler-icon" />
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mr-auto">

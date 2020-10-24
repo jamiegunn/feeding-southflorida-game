@@ -21,23 +21,20 @@ class HomePage extends Component {
                 "caloricRequirements":parseInt(user.caloricRequirements)
             };
         }).filter(el => {
-            return el != null && el != '';
+            return el !== null && el !== '';
         });
 
         const adults = cleaned.map(user => {
             if(user.age >= 18) return user;
         }).filter(el => {
-            return el != null && el != '';
+            return el !== null && el !== '';
         });
 
         const kids = cleaned.map(user => {
             if(user.age < 18) return user;
         }).filter(el => {
-            return el != null && el != '';
+            return el !== null && el !== '';
         });
-
-        console.log('adults', adults);
-        console.log('kids', kids);
 
         const numAdults = Math.random() * (5 - 1) + 1; 
         const numKids = Math.random() * (5 - 1) + 1; 
@@ -55,15 +52,14 @@ class HomePage extends Component {
             kidsModal.push(item);
         }
 
-
         let adultCals = 0;
         adultsModal.map(adult => {
-            adultCals += adult.caloricRequirements;
+            if(adult && adult.caloricRequirements) adultCals += adult.caloricRequirements;
         });
 
         let kidsCals = 0;
         kidsModal.map(kid => {
-            kidsCals += kid.caloricRequirements;
+            if(kid && kid.caloricRequirements) kidsCals += kid.caloricRequirements;
         });
 
 
@@ -94,8 +90,6 @@ class HomePage extends Component {
         c.setState({
             showModal: false
           });
-        
-        console.log('showModal', c);
     }
 
 

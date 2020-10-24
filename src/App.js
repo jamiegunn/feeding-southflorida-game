@@ -17,12 +17,10 @@ import HomePage from "./components/HomePage";
 export default function App() {
   return (
     <Router>
-<<<<<<< HEAD
       <div class="container-fluid">
         <nav class="navbar navbar-expand-lg navbar-light">
           <a class="navbar-brand" href="/">
             <img class="imageHalf" src="http://localhost:3000/images/fsf-header-logo@2x.png"/>
->>>>>>> 9c531f1fd3fbc18f458b30a0c5a5ae6753c8fc50
           </a>
           <button
             className="navbar-toggler"

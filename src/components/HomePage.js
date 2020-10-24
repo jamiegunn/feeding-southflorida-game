@@ -5,6 +5,7 @@ import StepTwo from './wizard/StepTwo';
 import CoolNav from './CoolNav';
 import ModalPage from './ModalPage';
 import { CardBody, CardTitle, Button, Container, Row, Col } from 'reactstrap';
+import People from '../data/people.json'
 
 class HomePage extends Component {
 
@@ -12,9 +13,67 @@ class HomePage extends Component {
         super(props);
         console.log('HomePage');
 
+        const cleaned =  People.map(user => {
+            return {
+                "gender":"Male",
+                "age": parseInt(user.age),
+                "activityLevel":"Sedintary",
+                "caloricRequirements":parseInt(user.caloricRequirements)
+            };
+        }).filter(el => {
+            return el != null && el != '';
+        });
+
+        const adults = cleaned.map(user => {
+            if(user.age >= 18) return user;
+        }).filter(el => {
+            return el != null && el != '';
+        });
+
+        const kids = cleaned.map(user => {
+            if(user.age < 18) return user;
+        }).filter(el => {
+            return el != null && el != '';
+        });
+
+        console.log('adults', adults);
+        console.log('kids', kids);
+
+        const numAdults = Math.random() * (5 - 1) + 1; 
+        const numKids = Math.random() * (5 - 1) + 1; 
+
+        const adultsModal = [];
+        const kidsModal = [];
+
+        for(var i = 0; i < numAdults; i++){
+            var item = adults[Math.floor(Math.random() * adults.length)];
+            adultsModal.push(item);
+        }
+
+        for(var i = 0; i < numKids; i++){
+            var item = kids[Math.floor(Math.random() * kids.length)];
+            kidsModal.push(item);
+        }
+
+
+        let adultCals = 0;
+        adultsModal.map(adult => {
+            adultCals += adult.caloricRequirements;
+        });
+
+        let kidsCals = 0;
+        kidsModal.map(kid => {
+            kidsCals += kid.caloricRequirements;
+        });
+
+
         this.state = {
             price: 0,
-            showModal: true
+            showModal: true,
+            adultsModal: adultsModal,
+            kidsModal:kidsModal,
+            adultCals:adultCals,
+            kidsCals: kidsCals
         };
 
     }
@@ -45,7 +104,7 @@ class HomePage extends Component {
 
         if(this.state.showModal){
             return (
-                <ModalPage callback={this.modalCallback} context={this}></ModalPage>
+                <ModalPage adultCals = {this.state.adultCals} kidsCals ={this.state.kidsCals} adultsModal = {this.state.adultsModal} kidsModal={this.state.kidsModal} callback={this.modalCallback} context={this}></ModalPage>
                 );
         } else {
         return (

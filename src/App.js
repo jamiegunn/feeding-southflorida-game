@@ -34,13 +34,13 @@ export default function App() {
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
               <li class="nav-item">
-                <Link to="/">Home</Link>
+                <Link to="/" class="nav-link">Home</Link>
               </li>
               <li class="nav-item">
-                <Link to="/about">About</Link>
+                <Link to="/about" class="nav-link">About</Link>
               </li>
               <li class="nav-item">
-                <Link to="/topics">Topics</Link>
+                <Link to="/topics" class="nav-link">Topics</Link>
               </li>
             </ul>
           </div>

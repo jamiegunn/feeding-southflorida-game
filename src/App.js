@@ -10,6 +10,8 @@ import {
   useParams
 } from "react-router-dom";
 
+import HomePage from './components/HomePage'
+
 export default function App() {
   return (
     <Router>
@@ -34,7 +36,7 @@ export default function App() {
             <Topics />
           </Route>
           <Route path="/">
-            <Home />
+            <HomePage />
           </Route>
         </Switch>
       </div>
@@ -42,9 +44,6 @@ export default function App() {
   );
 }
 
-function Home() {
-  return <h2>Home</h2>;
-}
 
 function About() {
   return <h2>About</h2>;

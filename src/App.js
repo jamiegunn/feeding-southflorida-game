@@ -56,7 +56,7 @@ export default function App() {
           </Switch>
         </div>
 		<div class="row footerExtraBottomMargin">
-		<div class="col-md-6">
+		<div class="col-md-12 fixed-bottom footerExtraBottomMargin">
 		<p>&copy;2020 Feeding South Florida</p>
 		</div>
 		</div>

@@ -71,8 +71,9 @@ class HomePage extends Component {
                             <div className="border" style={{ height: '100%' }}>
                                 <CardBody>
                                     <CardTitle>Summary Running Detail</CardTitle>
-                                    <CardBody><span>{this.state.price}</span></CardBody>
-                                    <Button>Button 1</Button>
+                                    <CardBody>
+                                        <span>{this.state.price}</span>
+                                    </CardBody>
                                 </CardBody>
                             </div>
                         </Col>

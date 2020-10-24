@@ -33,8 +33,7 @@ class HomePage extends Component {
     render() {      
         
         return (
-            <div>
-                <div style={{ marginTop: 20 }}></div>
+            <div style={{ marginTop: 20 }}>
                 <Container>
                     <Row>
                         <Col md="3">

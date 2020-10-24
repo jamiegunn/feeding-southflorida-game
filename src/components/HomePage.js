@@ -11,36 +11,15 @@ class HomePage extends Component {
 
     constructor(props) {
         super(props);
-        console.log('HomePage');
-
-        const cleaned =  People.map(user => {
-            return {
-                "gender":"Male",
-                "age": parseInt(user.age),
-                "activityLevel":"Sedintary",
-                "caloricRequirements":parseInt(user.caloricRequirements)
-            };
-        }).filter(el => {
-            return el !== null && el !== '';
-        });
-
-        const adults = cleaned.map(user => {
-            if(user.age >= 18) return user;
-        }).filter(el => {
-            return el !== null && el !== '';
-        });
-
-        const kids = cleaned.map(user => {
-            if(user.age < 18) return user;
-        }).filter(el => {
-            return el !== null && el !== '';
-        });
+        
+        const adults = People.map(user => { if(user.age >= 18) return user; }).filter(el => { return el !== null && el !== ''; });
+        const kids = People.map(user => { if(user.age < 18) return user; }).filter(el => { return el !== null && el !== ''; });
 
         const numAdults = Math.random() * (5 - 1) + 1; 
         const numKids = Math.random() * (5 - 1) + 1; 
 
-        const adultsModal = [];
-        const kidsModal = [];
+        let adultsModal = [];
+        let kidsModal = [];
 
         for(var i = 0; i < numAdults; i++){
             var item = adults[Math.floor(Math.random() * adults.length)];
@@ -53,29 +32,13 @@ class HomePage extends Component {
         }
 
         let adultCals = 0;
-        adultsModal.map(adult => {
-            if(adult && adult.caloricRequirements) adultCals += adult.caloricRequirements;
-        });
+        adultsModal.map(adult => { if(adult && adult.caloricRequirements) adultCals += adult.caloricRequirements });
 
         let kidsCals = 0;
-        kidsModal.map(kid => {
-            if(kid && kid.caloricRequirements) kidsCals += kid.caloricRequirements;
-        });
+        kidsModal.map(kid => { if(kid && kid.caloricRequirements) kidsCals += kid.caloricRequirements });
 
+        this.state = { price: 0, showModal: true, adultsModal: adultsModal, kidsModal:kidsModal, adultCals:adultCals, kidsCals: kidsCals };
 
-        this.state = {
-            price: 0,
-            showModal: true,
-            adultsModal: adultsModal,
-            kidsModal:kidsModal,
-            adultCals:adultCals,
-            kidsCals: kidsCals
-        };
-
-    }
-
-    componentDidMount() {   
-     
     }
 
     callback(value, context){
@@ -91,7 +54,6 @@ class HomePage extends Component {
             showModal: false
           });
     }
-
 
     render() {      
         console.log('this.state.showModal', this.state.showModal);
@@ -135,7 +97,7 @@ class HomePage extends Component {
                                             showModal: true
                                           });
 
-                        }}>Show My Family</Button>&nbsp; 
+                                        }}>Show My Family</Button>&nbsp; 
                                 </CardBody>
                             </div>
                         </Col>

@@ -1,6 +1,7 @@
 import logo from "./logo.svg";
 import "./App.css";
 import React from "react";
+import MapPage from './components/MapPage'
 import {
   BrowserRouter as Router,
   Switch,
@@ -40,7 +41,7 @@ export default function App() {
                 <Link to="/about" class="nav-link">About</Link>
               </li>
               <li class="nav-item">
-                <Link to="/topics" class="nav-link">Topics</Link>
+                <Link to="/map" class="nav-link">Map</Link>
               </li>
             </ul>
           </div>
@@ -50,8 +51,8 @@ export default function App() {
             <Route path="/about">
               <About />
             </Route>
-            <Route path="/topics">
-              <Topics />
+            <Route path="/map">
+              <MapPage />
             </Route>
             <Route path="/">
               <HomePage />

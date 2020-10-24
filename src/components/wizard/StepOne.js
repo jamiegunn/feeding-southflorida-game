@@ -10,6 +10,9 @@ import {
   Container,
   Row,
   Col,
+  UncontrolledPopover,
+  PopoverHeader,
+  PopoverBody
 } from "reactstrap";
 import duix from 'duix';
 
@@ -32,7 +35,11 @@ class StepOne extends Component {
                             this.props.callback(1, this.props.context);
                             this.props.goToStep(2);
                         }}>Button 1</Button>&nbsp; 
-                        <Button onClick={() => this.props.goToStep(2)}>Button 2</Button>
+                        <Button id = "StepOneItem1">Button 2</Button>
+                        <UncontrolledPopover placement="bottom" target="StepOneItem1">
+                            <PopoverHeader>Popover Title</PopoverHeader>
+                            <PopoverBody>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</PopoverBody>
+                        </UncontrolledPopover>
                     </CardBody>
                 </Card>
             </Col>

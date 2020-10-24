@@ -58,6 +58,11 @@ export default function App() {
             </Route>
           </Switch>
         </div>
+		<div class="row footerExtraBottomMargin">
+		<div class="col-md-6">
+		<p>&copy;2020 Feeding South Florida</p>
+		</div>
+		</div>
       </div>
     </Router>
   );

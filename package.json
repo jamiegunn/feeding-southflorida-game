@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^12.1.10",
     "bootstrap": "^4.5.3",
     "duix": "^3.0.1",
+    "google-map-react": "^2.1.8",
     "less": "^3.11.1",
     "less-loader": "^5.0.0",
     "optimize-css-assets-webpack-plugin": "^5.0.3",

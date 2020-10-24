@@ -1,42 +1,35 @@
 import React, { Component } from 'react';
-import StepWizard from 'react-step-wizard';
-import StepOne from './wizard/StepOne';
-import StepTwo from './wizard/StepTwo';
-import CoolNav from './CoolNav';
-import duix from 'duix';
+import GoogleMapReact from 'google-map-react';
 import { Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, Button, Container, Row, Col
 } from 'reactstrap';
+const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
 class MapPage extends Component {
 
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            price: 0
-        };
-    }
-
-    componentDidMount() {   
+    static defaultProps = {
+        center: {
+          lat: 59.95,
+          lng: 30.33
+        },
+        zoom: 11
+      };
      
-    }
-
-    
-
-
-    render() {      
-        
+      render() {
         return (
-            <div style={{ marginTop: 20 }}>
-                <Container>
-                    <Row>
-                        <Col md="3">
-                            I'm a map
-                        </Col>
-                    </Row>
-                </Container>
-            </div>
+          // Important! Always set the container height explicitly
+          <div style={{ height: '100vh', width: '100%' }}>
+            <GoogleMapReact
+              defaultCenter={this.props.center}
+              defaultZoom={this.props.zoom}
+            >
+              <AnyReactComponent
+                lat={59.955413}
+                lng={30.337844}
+                text="My Marker"
+              />
+            </GoogleMapReact>
+          </div>
         );
-    }
+      }
 }
 export default MapPage;

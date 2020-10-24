@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import StepWizard from 'react-step-wizard';
 import StepOne from './wizard/StepOne';
 import StepTwo from './wizard/StepTwo';
+import StepThree from './wizard/StepThree';
 import CoolNav from './CoolNav';
 import ModalPage from './ModalPage';
 import { CardBody, CardTitle, Button, Container, Row, Col } from 'reactstrap';
@@ -38,7 +39,6 @@ class HomePage extends Component {
         kidsModal.map(kid => { if(kid && kid.caloricRequirements) kidsCals += kid.caloricRequirements });
 
         this.state = { price: 0, showModal: true, adultsModal: adultsModal, kidsModal:kidsModal, adultCals:adultCals, kidsCals: kidsCals };
-
     }
 
     callback(value, context){
@@ -105,7 +105,7 @@ class HomePage extends Component {
                             <div className="border" style={{ height: '100%', marginTop: 20 }}>
                                 <CardBody>
                                     <CardTitle>Did you know?</CardTitle>
-                                    <Button>Button 1</Button>
+                                    <a href ="https://feedingsouthflorida.org/donate-now/" target = "_blank">Donate Now!</a>
                                 </CardBody>
                             </div>
                         </Col>

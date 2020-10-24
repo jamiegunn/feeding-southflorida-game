@@ -1,0 +1,8 @@
+[
+    {"gender":"Female", "name":"Zendaya", "funFact":"Some fun fact here." },
+    {"gender":"Female", "name":"Ariadne", "funFact":"Some fun fact here." },
+    {"gender":"Female", "name":"Dixie", "funFact":"Some fun fact here." },
+    {"gender":"Male", "name":"Liam", "funFact":"Some fun fact here." },
+    {"gender":"Male", "name":"Noah", "funFact":"Some fun fact here." },
+    {"gender":"Male", "name":"Oliver", "funFact":"Some fun fact here." }
+]

@@ -6,9 +6,10 @@ import StepThree from './wizard/StepThree';
 import CoolNav from './CoolNav';
 import ModalPage from './ModalPage';
 import { CardBody, CardTitle, Button, Container, Row, Col } from 'reactstrap';
-import People from '../data/people.json'
-import Food from '../data/food.json'
-import Jobs from '../data/jobs.json'
+import People from '../data/people.json';
+import Food from '../data/food.json';
+import Jobs from '../data/jobs.json';
+import Names from '../data/names.json';
 
 class HomePage extends Component {
 
@@ -40,7 +41,7 @@ class HomePage extends Component {
         let kidsCals = 0;
         kidsModal.map(kid => { if(kid && kid.caloricRequirements) kidsCals += kid.caloricRequirements });
 
-        this.state = { price: 0, showModal: true, adultsModal: adultsModal, kidsModal:kidsModal, adultCals:adultCals, kidsCals: kidsCals };
+        this.state = { price: 0, showModal: true, jobs: Jobs, names: Names, adultsModal: adultsModal, kidsModal:kidsModal, adultCals:adultCals, kidsCals: kidsCals };
     }
 
     callback(value, context){
@@ -58,11 +59,9 @@ class HomePage extends Component {
     }
 
     render() {      
-        console.log('this.state.showModal', this.state.showModal);
-
         if(this.state.showModal){
             return (
-                <ModalPage adultCals = {this.state.adultCals} kidsCals ={this.state.kidsCals} adultsModal = {this.state.adultsModal} kidsModal={this.state.kidsModal} callback={this.modalCallback} context={this}></ModalPage>
+                <ModalPage names = {this.state.names} jobs = {this.state.jobs} adultCals = {this.state.adultCals} kidsCals ={this.state.kidsCals} adultsModal = {this.state.adultsModal} kidsModal={this.state.kidsModal} callback={this.modalCallback} context={this}></ModalPage>
                 );
         } else {
         return (

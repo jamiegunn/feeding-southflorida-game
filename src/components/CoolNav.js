@@ -4,7 +4,7 @@ class CoolNav extends Component {
   render() {
     return (
         <div>Cool Nav</div>
-    );
+   );
   }
 }
 

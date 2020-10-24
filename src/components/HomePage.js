@@ -3,18 +3,20 @@ import StepWizard from 'react-step-wizard';
 import StepOne from './wizard/StepOne';
 import StepTwo from './wizard/StepTwo';
 import CoolNav from './CoolNav';
-import duix from 'duix';
-import { Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, Button, Container, Row, Col
-} from 'reactstrap';
+import ModalPage from './ModalPage';
+import { Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, Button, Container, Row, Col } from 'reactstrap';
 
 class HomePage extends Component {
 
     constructor(props) {
         super(props);
+        console.log('HomePage');
 
         this.state = {
-            price: 0
+            price: 0,
+            showModal: true
         };
+
     }
 
     componentDidMount() {   
@@ -29,9 +31,23 @@ class HomePage extends Component {
         })
     }
 
+    modalCallback(c){       
+        c.setState({
+            showModal: false
+          });
+        
+        console.log('showModal', c);
+    }
+
 
     render() {      
-        
+        console.log('this.state.showModal', this.state.showModal);
+
+        if(this.state.showModal){
+            return (
+                <ModalPage callback={this.modalCallback} context={this}></ModalPage>
+                );
+        } else {
         return (
             <div style={{ marginTop: 20 }}>
                 <Container>
@@ -76,6 +92,7 @@ class HomePage extends Component {
                 </Container>
             </div>
         );
+    }
     }
 }
 export default HomePage;

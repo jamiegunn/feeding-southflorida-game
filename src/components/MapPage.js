@@ -8,8 +8,8 @@ class MapPage extends Component {
 
     static defaultProps = {
         center: {
-          lat: 59.95,
-          lng: 30.33
+          lat: 26.00811,
+          lng: -80.28011
         },
         zoom: 11
       };
@@ -24,9 +24,9 @@ class MapPage extends Component {
               defaultZoom={this.props.zoom}
             >
               <AnyReactComponent
-                lat={59.955413}
-                lng={30.337844}
-                text="My Marker"
+                lat={26.00811}
+                lng={-80.28011}
+                text="Feeding South Florida"
               />
             </GoogleMapReact>
           </div>

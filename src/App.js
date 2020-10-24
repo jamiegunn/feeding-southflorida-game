@@ -38,11 +38,12 @@ export default function App() {
               <li class="nav-item">
                 <Link to="/" class="nav-link">Home</Link>
               </li>
-              <li class="nav-item">
-                <Link to="/about" class="nav-link">About</Link>
-              </li>
+              
               <li class="nav-item">
                 <Link to="/map" class="nav-link">Map</Link>
+              </li>
+              <li class="nav-item">
+                <a href="https://feedingsouthflorida.org/who-we-are/" target = "_blank" class="nav-link">Who we are</a>
               </li>
             </ul>
           </div>

@@ -18,6 +18,16 @@
 	
 }
 
+.btn {
+	background-color: #FF7900!important;
+	border-radius: 30px!important;
+	border: none!important;
+	color: white;
+	font-weight: normal;
+	font-family: sans-serif;
+	text-align: center!important;
+}
+
 .footerBottomBottomColor {
 	background-color: #BF5B00!important;
 }

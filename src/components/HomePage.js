@@ -4,7 +4,7 @@ import StepOne from './wizard/StepOne';
 import StepTwo from './wizard/StepTwo';
 import CoolNav from './CoolNav';
 import ModalPage from './ModalPage';
-import { Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, Button, Container, Row, Col } from 'reactstrap';
+import { CardBody, CardTitle, Button, Container, Row, Col } from 'reactstrap';
 
 class HomePage extends Component {
 
@@ -76,7 +76,13 @@ class HomePage extends Component {
                             <div className="border" style={{ height: '100%', marginTop: 20 }}>
                                 <CardBody>
                                     <CardTitle>Family Info / Who Goes Hungry</CardTitle>
-                                    <Button>Button 1</Button>
+                                    <Button onClick={() => {
+                                        
+                                        this.setState({
+                                            showModal: true
+                                          });
+
+                        }}>Show My Family</Button>&nbsp; 
                                 </CardBody>
                             </div>
                         </Col>

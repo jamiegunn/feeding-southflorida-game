@@ -14,7 +14,6 @@ import {
   PopoverHeader,
   PopoverBody
 } from "reactstrap";
-import duix from 'duix';
 
 class StepOne extends Component {
 

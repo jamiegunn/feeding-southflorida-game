@@ -14,11 +14,15 @@
 }
 
 .imageHalf{
-width: 50%;	
+width: 100%;	
 }
 
 .navbar-brand {
-#background-image: url(http://localhost:3000/images/fsf-header-logo@2x.png)!important;
+	width: 220px;
+}
+
+.navbar-collapse {
+	margin-top: auto;
 }
 
 .App-header {

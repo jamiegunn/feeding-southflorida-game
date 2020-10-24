@@ -55,13 +55,13 @@ export default function App() {
             </Route>
           </Switch>
         </div>
-		<div class="row footerExtraBottomMargin">
-		<div class="col-md-12 fixed-bottom text-center footerExtraBottomMargin">
+		<div className="row footerExtraBottomMargin">
+		<div className="col-md-12 fixed-bottom text-center footerExtraBottomMargin">
 			<p><i>Coded by Feeding South Florida Gang at Palm Beach Tech Hackathon 2020!</i></p>
 			<br></br>
 		</div>
-		<div class="row">
-			<div class="col-xs-12 fixed-bottom footerExtraBottomMargin footerBottomBottomColor text-center">
+		<div className="row">
+			<div className="col-xs-12 fixed-bottom footerExtraBottomMargin footerBottomBottomColor text-center">
 			© Feeding South Florida is a 501 (c)(3). © 2020 All rights reserved.</div>
 			</div>
 		</div>

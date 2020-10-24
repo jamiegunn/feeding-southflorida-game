@@ -17,6 +17,14 @@ import {
 
 class StepOne extends Component {
     render() {
+        console.log('this.props', this.props);
+
+        const localFood = this.props.food.map(item => {
+            if(item.FoodGroup === 'Baked Foods') return item;
+        }).filter(el => { return el !== null && el !== '' && el !== undefined; });
+
+        console.log(localFood);
+
         return (
             <Container>
                 <Row>
@@ -24,15 +32,15 @@ class StepOne extends Component {
                         <Card>
                             <CardImg width="100%" src="https://reactstrap.github.io/assets/318x180.svg" alt="Card image cap" />
                             <CardBody>
-                                <CardTitle>Card title</CardTitle>
-                                <CardSubtitle>Card subtitle</CardSubtitle>
-                                <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
+                                <CardTitle>{localFood[0].name}</CardTitle>
+                                <CardSubtitle>Calories: {localFood[0].Calories}<br></br>Cost: ${localFood[0].Cost}</CardSubtitle>
+                                <CardText>{localFood[0].FunFact}</CardText>
                                 <Button onClick={() => {
                                     console.log('context passed to StepOne', this.props.context);
                                     this.props.callback(1, this.props.context);
                                     this.props.goToStep(2);
-                                }}>Button 1</Button>&nbsp;
-                        <Button id="StepOneItem1">Button 2</Button>
+                                }}>Select</Button>&nbsp;
+                        <Button id="StepOneItem1">Show Details</Button>
                                 <UncontrolledPopover placement="bottom" trigger="focus" placement="right" target="StepOneItem1">
                                     <PopoverHeader>Oak Wood Chips - 20lbs</PopoverHeader>
                                     <PopoverBody><table>
@@ -73,11 +81,15 @@ class StepOne extends Component {
                         <Card>
                             <CardImg width="100%" src="https://reactstrap.github.io/assets/318x180.svg" alt="Card image cap" />
                             <CardBody>
-                                <CardTitle>Card title</CardTitle>
-                                <CardSubtitle>Card subtitle</CardSubtitle>
-                                <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
-                                <Button onClick={() => this.props.goToStep(2)}>Button 1</Button>&nbsp;
-                        <Button onClick={() => this.props.goToStep(2)}>Button 2</Button>
+                            <CardTitle>{localFood[1].name}</CardTitle>
+                                <CardSubtitle>Calories: {localFood[1].Calories}<br></br>Cost: ${localFood[1].Cost}</CardSubtitle>
+                                <CardText>{localFood[1].FunFact}</CardText>
+                                <Button onClick={() => {
+                                    console.log('context passed to StepOne', this.props.context);
+                                    this.props.callback(1, this.props.context);
+                                    this.props.goToStep(2);
+                                }}>Select</Button>&nbsp;
+                                <Button onClick={() => this.props.goToStep(2)}>Show Details</Button>
                             </CardBody>
                         </Card>
                     </Col>
@@ -86,11 +98,15 @@ class StepOne extends Component {
                         <Card>
                             <CardImg width="100%" src="https://reactstrap.github.io/assets/318x180.svg" alt="Card image cap" />
                             <CardBody>
-                                <CardTitle>Card title</CardTitle>
-                                <CardSubtitle>Card subtitle</CardSubtitle>
-                                <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
-                                <Button onClick={() => this.props.goToStep(2)}>Button 1</Button>&nbsp;
-                                <Button onClick={() => this.props.goToStep(2)}>Button 2</Button>
+                            <CardTitle>{localFood[2].name}</CardTitle>
+                                <CardSubtitle>Calories: {localFood[2].Calories}<br></br>Cost: ${localFood[2].Cost}</CardSubtitle>
+                                <CardText>{localFood[2].FunFact}</CardText>
+                                <Button onClick={() => {
+                                    console.log('context passed to StepOne', this.props.context);
+                                    this.props.callback(1, this.props.context);
+                                    this.props.goToStep(2);
+                                }}>Select</Button>&nbsp;
+                                <Button onClick={() => this.props.goToStep(2)}>Show Details</Button>
                             </CardBody>
                         </Card>
                     </Col>

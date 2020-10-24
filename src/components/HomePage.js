@@ -7,14 +7,16 @@ import CoolNav from './CoolNav';
 import ModalPage from './ModalPage';
 import { CardBody, CardTitle, Button, Container, Row, Col } from 'reactstrap';
 import People from '../data/people.json'
+import Food from '../data/food.json'
+import Jobs from '../data/jobs.json'
 
 class HomePage extends Component {
 
     constructor(props) {
         super(props);
         
-        const adults = People.map(user => { if(user.age >= 18) return user; }).filter(el => { return el !== null && el !== ''; });
-        const kids = People.map(user => { if(user.age < 18) return user; }).filter(el => { return el !== null && el !== ''; });
+        const adults = People.map(user => { if(user.age >= 18) return user; }).filter(el => { return el !== null && el !== '' && el !== undefined; });
+        const kids = People.map(user => { if(user.age < 18) return user; }).filter(el => { return el !== null && el !== '' && el !== undefined; });
 
         const numAdults = Math.random() * (5 - 1) + 1; 
         const numKids = Math.random() * (5 - 1) + 1; 
@@ -72,7 +74,13 @@ class HomePage extends Component {
                                 <CardBody>
                                     <CardTitle>Summary Running Detail</CardTitle>
                                     <CardBody>
-                                        <span>{this.state.price}</span>
+                                    Total Spend 
+                                    $ 20
+                                    Remaining 
+                                    $ 5
+                                    Calories Puchased
+                                    4000
+                                    <span>{this.state.price}</span>
                                     </CardBody>
                                 </CardBody>
                             </div>
@@ -80,8 +88,9 @@ class HomePage extends Component {
                         <Col md="9">
                             <div className="border" style={{ height: '100%' }}>
                                 <StepWizard nav={<CoolNav />}>
-                                    <StepOne callback={this.callback} context={this} />
-                                    <StepTwo />
+                                    <StepOne food={Food} callback={this.callback} context={this} />
+                                    <StepTwo food={Food} callback={this.callback} context={this} />
+                                    <StepThree food={Food} callback={this.callback} context={this} />
                                 </StepWizard>
                             </div>
                         </Col>

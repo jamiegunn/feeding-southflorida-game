@@ -1,0 +1,8 @@
+JUDGING RUBRIC:
+OVERALL VALUE: The project will provide significant value to the business.
+IMPACT - The team is clear about the problem being solved. The solution can affect a large number of people. The solution will make a big improvement in peoples’ lives.
+FUNCTIONALITY - The solution directly addresses the problem the team wishes to solve. The solution is intuitive and easy to use - simple, not overly complex. The solution doesn’t do too much or too little.
+VIABILITY - The intended audience would likely use the product. The demo could naturally be developed into a working product. The team brings relevant experience and skills.
+INNOVATION - The solution is unique; I’ve never seen anything like it. The solution is interesting, creative, and outside the box.
+DESIGN - For customer-facing work, the aesthetic is professional and is on brand. For internal work (processes), it can be used by the business in an intuitive way.
+TEAMWORK - The team used their time effectively and was able to utilize the strengths of all members of their team to contribute to the outcome.  

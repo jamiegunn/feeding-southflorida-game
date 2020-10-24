@@ -1,19 +1,30 @@
 import React, { Component } from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
+
 class ModalPage extends Component {
+
+    constructor(props) {
+        super(props);
+    }
 
     componentDidMount() {   
      
     }
 
     render() {      
+
+        console.log(this.props.adultsModal);
+        console.log(this.props.kidsModal);
+
         return  (
             <div style={{height:100, width:100}}>
               <Modal isOpen={true} modalTransition={{ timeout: 700 }} backdropTransition={{ timeout: 1300 }}>
                 <ModalHeader>Family Info</ModalHeader>
                 <ModalBody>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  Our family unit has {this.props.adultsModal.length} adults with caloric needs of {this.props.adultCals}.<br></br>
+                  Our family unit has {this.props.kidsModal.length} kids with caloric needs of {this.props.kidsCals}.<br></br>
+
                 </ModalBody>
                 <ModalFooter>
                 <Button color = "primary" onClick={() => {

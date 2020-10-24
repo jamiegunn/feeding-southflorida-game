@@ -24,8 +24,8 @@ class StepOne extends Component {
                         <CardTitle>Card title</CardTitle>
                         <CardSubtitle>Card subtitle</CardSubtitle>
                         <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
-                        <Button>Button 1</Button>&nbsp; 
-                        <Button>Button 2</Button>
+                        <Button onClick={() => this.props.goToStep(2)}>Button 1</Button>&nbsp; 
+                        <Button onClick={() => this.props.goToStep(2)}>Button 2</Button>
                     </CardBody>
                 </Card>
             </Col>
@@ -37,8 +37,8 @@ class StepOne extends Component {
                         <CardTitle>Card title</CardTitle>
                         <CardSubtitle>Card subtitle</CardSubtitle>
                         <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
-                        <Button>Button 1</Button>&nbsp; 
-                        <Button>Button 2</Button>
+                        <Button onClick={() => this.props.goToStep(2)}>Button 1</Button>&nbsp; 
+                        <Button onClick={() => this.props.goToStep(2)}>Button 2</Button>
                     </CardBody>
                 </Card>
             </Col>
@@ -50,8 +50,8 @@ class StepOne extends Component {
                         <CardTitle>Card title</CardTitle>
                         <CardSubtitle>Card subtitle</CardSubtitle>
                         <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
-                        <Button>Button 1</Button>&nbsp; 
-                        <Button>Button 2</Button>
+                        <Button onClick={() => this.props.goToStep(2)}>Button 1</Button>&nbsp; 
+                        <Button onClick={() => this.props.goToStep(2)}>Button 2</Button>
                     </CardBody>
                 </Card>
             </Col>

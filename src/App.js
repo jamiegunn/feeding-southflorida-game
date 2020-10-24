@@ -56,9 +56,14 @@ export default function App() {
           </Switch>
         </div>
 		<div class="row footerExtraBottomMargin">
-		<div class="col-md-12 fixed-bottom footerExtraBottomMargin">
-		<p>&copy;2020 Feeding South Florida</p>
+		<div class="col-md-12 fixed-bottom text-center footerExtraBottomMargin">
+			<p><i>Coded by Feeding South Florida Gang at Palm Beach Tech Hackathon 2020!</i></p>
+			<br></br>
 		</div>
+		<div class="row">
+			<div class="col-xs-12 fixed-bottom footerExtraBottomMargin footerBottomBottomColor text-center">
+			© Feeding South Florida is a 501 (c)(3). © 2020 All rights reserved.</div>
+			</div>
 		</div>
       </div>
     </Router>

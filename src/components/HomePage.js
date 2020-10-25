@@ -79,7 +79,7 @@ class HomePage extends Component {
                 );
         } else {
         return (
-            <div style={{ marginTop: 20 }}>
+            <div style={{ marginTop: 20,marginBottom: 150 }}>
                 <Container>
                     <Row>
                         <Col md="4">
@@ -131,8 +131,12 @@ class HomePage extends Component {
                                 <CardBody>
                                     <CardTitle>Did you know?</CardTitle>
 									<ul>
-									<li>$1 donated to Feeding South Florida = 9 meals for hungry families. </li>
-									<li>Other useful tips and tricks for saving money and planning meals to appear here. </li>
+									<li>Every $1 = 9 meals!</li>
+									<li>Because of COVID-19, Feeding South Florida is serving an estimated 1.4 million people who are food insecure</li>
+									<li>1 in 5 adults and 1 in 4 children in South Florida (Palm Beach, Broward, Miami-Dade, and Monroe) are food insecure.</li>
+									<li>We distributed 119 million pounds of food (over 99 million meals!) in the last year.</li>
+									<li>Over 40% of people seeking help since COVID-19 began are doing so for the first time.</li>
+									<li>Learn more at <a href ="https://www.feedingsouthflorida.org" target = "_blank">www.feedingsouthflorida.org</a>!</li>
 									</ul>
                                     <a href ="https://feedingsouthflorida.org/donate-now/" target = "_blank" class="btn">Donate Now!</a>
                                 </CardBody>

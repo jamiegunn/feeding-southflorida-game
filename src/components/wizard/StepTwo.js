@@ -20,7 +20,7 @@ class StepTwo extends Component {
         console.log('this.props', this.props);
 
         const localFood = this.props.food.map(item => {
-            if(item.FoodGroup === 'More') return item;
+            if(item.FoodGroup === 'Lunch') return item;
         }).filter(el => { return el !== null && el !== '' && el !== undefined; });
 
 		var item4 = Math.floor(Math.random() * localFood.length);

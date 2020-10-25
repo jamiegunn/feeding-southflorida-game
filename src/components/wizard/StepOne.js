@@ -24,13 +24,17 @@ class StepOne extends Component {
         console.log('this.props', this.props);	
           
         const localFood = this.props.food.map(item => {
-            if(item.FoodGroup === 'Baked Foods') return item;
+            if(item.FoodGroup === 'Breakfast') return item;
         }).filter(el => { return el !== null && el !== '' && el !== undefined; });
 		
 		var item1 = Math.floor(Math.random() * localFood.length);
 		var item2 = Math.floor(Math.random() * localFood.length);
 		var item3 = Math.floor(Math.random() * localFood.length);
 
+		var image1 = "./images/" + localFood[item1].ImageURL;
+		var image2 = "./images/" + localFood[item2].ImageURL;
+		var image3 = "./images/" + localFood[item3].ImageURL;
+		
         console.log(localFood);
 
         return (
@@ -38,7 +42,8 @@ class StepOne extends Component {
                 <Row>
                     <Col>
                         <Card>
-                            <CardImg width="100%" src="https://reactstrap.github.io/assets/318x180.svg" alt="Card image cap" />
+						
+                            <CardImg width="100%" src={image1} alt={localFood[item1].name} />
                             <CardBody>
                                 <CardTitle>{localFood[item1].name}</CardTitle>
                                 <CardSubtitle>Calories: {localFood[item1].Calories}<br></br>Cost: ${localFood[item1].Cost}</CardSubtitle>
@@ -87,7 +92,7 @@ class StepOne extends Component {
 
                     <Col>
                         <Card>
-                            <CardImg width="100%" src="https://reactstrap.github.io/assets/318x180.svg" alt="Card image cap" />
+                            <CardImg width="100%" src={image2} alt={localFood[item2].name} />
                             <CardBody>
                             <CardTitle>{localFood[item2].name}</CardTitle>
                                 <CardSubtitle>Calories: {localFood[item2].Calories}<br></br>Cost: ${localFood[item2].Cost}</CardSubtitle>
@@ -136,7 +141,7 @@ class StepOne extends Component {
 
                     <Col>
                         <Card>
-                            <CardImg width="100%" src="https://reactstrap.github.io/assets/318x180.svg" alt="Card image cap" />
+                            <CardImg width="100%" src={image3} alt={localFood[item3].name} />
                             <CardBody>
                             <CardTitle>{localFood[item3].name}</CardTitle>
                                 <CardSubtitle>Calories: {localFood[item3].Calories}<br></br>Cost: ${localFood[item3].Cost}</CardSubtitle>

@@ -20,7 +20,7 @@ class StepThree extends Component {
         console.log('this.props', this.props);
 
         const localFood = this.props.food.map(item => {
-            if(item.FoodGroup === 'EvenMore') return item;
+            if(item.FoodGroup === 'Dinner') return item;
         }).filter(el => { return el !== null && el !== '' && el !== undefined; });
 
         var item7 = Math.floor(Math.random() * localFood.length);

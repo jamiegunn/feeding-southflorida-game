@@ -1,11 +1,11 @@
 [
-    {"ID":167512,"name":"Pillsbury Golden Layer Buttermilk Biscuits Artificial Flavor Refrigerated Dough", "FoodGroup":"Baked Foods", "Calories":307, "Cost":1, "FunFact":"This is a fact" },
-    {"ID":167513,"name":"Pillsbury Cinnamon Rolls With Icing Refrigerated Dough", "FoodGroup":"Baked Foods", "Calories":330, "Cost":2, "FunFact":"This is a fact" },
-    {"ID":167514,"name":"Kraft Foods Shake N Bake Original Recipe Coating For Pork Dry", "FoodGroup":"Baked Foods", "Calories":377, "Cost":5, "FunFact":"This is a fact" },
-    {"ID":167512,"name":"Pillsbury Golden Layer Buttermilk Biscuits Artificial Flavor Refrigerated Dough", "FoodGroup":"More", "Calories":307, "Cost":1, "FunFact":"This is a fact" },
-    {"ID":167513,"name":"Pillsbury Cinnamon Rolls With Icing Refrigerated Dough", "FoodGroup":"More", "Calories":330, "Cost":2, "FunFact":"This is a fact" },
-    {"ID":167514,"name":"Kraft Foods Shake N Bake Original Recipe Coating For Pork Dry", "FoodGroup":"More", "Calories":377, "Cost":5, "FunFact":"This is a fact" },
-    {"ID":167512,"name":"Pillsbury Golden Layer Buttermilk Biscuits Artificial Flavor Refrigerated Dough", "FoodGroup":"EvenMore", "Calories":307, "Cost":1, "FunFact":"This is a fact" },
-    {"ID":167513,"name":"Pillsbury Cinnamon Rolls With Icing Refrigerated Dough", "FoodGroup":"EvenMore", "Calories":330, "Cost":2, "FunFact":"This is a fact" },
-    {"ID":167514,"name":"Kraft Foods Shake N Bake Original Recipe Coating For Pork Dry", "FoodGroup":"EvenMore", "Calories":377, "Cost":5, "FunFact":"This is a fact" }
+{"ID":1,"name":"Pancake Breakfasts", "FoodGroup":"Breakfast", "Calories":825, "Cost":3.5, "ImageURL":"banana.jpg", "FunFact":"Pancake Mix, Fakle Syrup with genuine (artificial) butter flavor, butter, orange juice" },
+{"ID":2,"name":"Biscuits & Gravy", "FoodGroup":"Breakfast", "Calories":11211, "Cost":5, "ImageURL":"banana.jpg", "FunFact":"Ground Sausage, Roll(s) of Refrigerated Biscuiuts, Milk, Orange Juice, Eggs, Butter" },
+{"ID":3,"name":"Omlets", "FoodGroup":"Breakfast", "Calories":45444, "Cost":5, "ImageURL":"banana.jpg", "FunFact":"Eggs, Ham, Peppers, Mushrooms, Cheese, Onions, Milk, Orange Juice, Eggs, Butter" },
+{"ID":4,"name":"Waffles Buttermilk Frozen Ready-To-Heat", "FoodGroup":"Lunch", "Calories":825, "Cost":3.5, "ImageURL":"banana.jpg", "FunFact":"Pancake Mix, Fakle Syrup with genuine (artificial) butter flavor, butter, orange juice" },
+{"ID":5,"name":"Snacks Corn-Based Extruded Chips Plain", "FoodGroup":"Lunch", "Calories":11211, "Cost":5, "ImageURL":"banana.jpg", "FunFact":"Ground Sausage, Roll(s) of Refrigerated Biscuiuts, Milk, Orange Juice, Eggs, Butter" },
+{"ID":6,"name":"Twizzlers Strawberry Twists Candy", "FoodGroup":"Lunch", "Calories":45444, "Cost":5, "ImageURL":"banana.jpg", "FunFact":"Eggs, Ham, Peppers, Mushrooms, Cheese, Onions, Milk, Orange Juice, Eggs, Butter" },
+{"ID":7,"name":"Pancake Breakfasts", "FoodGroup":"Dinner", "Calories":825, "Cost":3.5, "ImageURL":"banana.jpg", "FunFact":"Pancake Mix, Fakle Syrup with genuine (artificial) butter flavor, butter, orange juice" },
+{"ID":8,"name":"Snacks Granola Bars Hard Plain", "FoodGroup":"Dinner", "Calories":11211, "Cost":5, "ImageURL":"banana.jpg", "FunFact":"Ground Sausage, Roll(s) of Refrigerated Biscuiuts, Milk, Orange Juice, Eggs, Butter" },
+{"ID":9,"name":"Glug", "FoodGroup":"Dinner", "Calories":45444, "Cost":5, "ImageURL":"banana.jpg", "FunFact":"Eggs, Ham, Peppers, Mushrooms, Cheese, Onions, Milk, Orange Juice, Eggs, Butter" }
 ]

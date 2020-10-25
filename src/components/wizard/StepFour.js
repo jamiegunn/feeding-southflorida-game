@@ -15,7 +15,7 @@ import {
     PopoverBody
 } from "reactstrap";
 
-class StepOne extends Component {
+class StepFour extends Component {
     render() {
         console.log('this.props.context', this.props.context);
         return (
@@ -36,4 +36,4 @@ class StepOne extends Component {
     }
 }
 
-export default StepOne;
+export default StepFour;

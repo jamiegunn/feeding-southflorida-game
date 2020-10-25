@@ -1,5 +1,5 @@
 [
-    {"JobTitle":"bob", "Salary":15000, "WeeklyPay":288, "FoodBudget":3132 },
-    {"JobTitle":"sander", "Salary":18000, "WeeklyPay":346, "FoodBudget":1980 },
-    {"JobTitle":"plumber", "Salary":12000, "WeeklyPay":230, "FoodBudget":1320 }
+    {"JobTitle":"bob", "Salary":15000, "WeeklyPay":288, "FoodBudget":32 },
+    {"JobTitle":"sander", "Salary":18000, "WeeklyPay":346, "FoodBudget":38 },
+    {"JobTitle":"plumber", "Salary":12000, "WeeklyPay":230, "FoodBudget":25 }
 ]

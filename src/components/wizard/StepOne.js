@@ -145,12 +145,7 @@ class StepOne extends Component {
                                     console.log('context passed to StepOne', this.props.context);
                                     this.props.callback(localFood[item3].Cost, localFood[item3].Calories, this.props.context);
                                     this.props.goToStep(2);
-                                }}>Select</Button>&nbsp;
-<<<<<<< HEAD
-                        <Button id="StepOneItem3">Show Details<FontAwesomeIcon icon="info-circle" /></Button>
-=======
-                        <Button id="StepOneItem3" title="Show Details">&#8226;&#8226;&#8226;</Button>
->>>>>>> 86ce735fccb92a54c8c83771a472ed47a54022c8
+                                }}>Select</Button>&nbsp;<Button id="StepOneItem3" title="Show Details">&#8226;&#8226;&#8226;</Button>
                                 <UncontrolledPopover placement="bottom" trigger="focus" placement="right" target="StepOneItem3">
                                     <PopoverHeader>{localFood[item3].name}</PopoverHeader>
                                     <PopoverBody><table>

@@ -26,6 +26,10 @@ class StepTwo extends Component {
 		var item4 = Math.floor(Math.random() * localFood.length);
 		var item5 = Math.floor(Math.random() * localFood.length);
 		var item6 = Math.floor(Math.random() * localFood.length);		
+
+		var image4 = "./images/" + localFood[item4].ImageURL;
+		var image5 = "./images/" + localFood[item5].ImageURL;
+		var image6 = "./images/" + localFood[item6].ImageURL;
 		
         console.log('localFood', localFood);
 
@@ -34,7 +38,7 @@ class StepTwo extends Component {
                 <Row>
                     <Col>
                         <Card>
-                            <CardImg width="100%" src="https://reactstrap.github.io/assets/318x180.svg" alt="Card image cap" />
+                            <CardImg width="100%" src={image4} alt={localFood[item4].name} />
                             <CardBody>
                                 <CardTitle>{localFood[item4].name}</CardTitle>
                                 <CardSubtitle>Calories: {localFood[item4].Calories}<br></br>Cost: ${localFood[item4].Cost}</CardSubtitle>
@@ -83,7 +87,7 @@ class StepTwo extends Component {
 
                     <Col>
                         <Card>
-                            <CardImg width="100%" src="https://reactstrap.github.io/assets/318x180.svg" alt="Card image cap" />
+                            <CardImg width="100%" src={image5} alt={localFood[item5].name} />
                             <CardBody>
                             <CardTitle>{localFood[item5].name}</CardTitle>
                                 <CardSubtitle>Calories: {localFood[item5].Calories}<br></br>Cost: ${localFood[item5].Cost}</CardSubtitle>
@@ -132,7 +136,7 @@ class StepTwo extends Component {
 
                     <Col>
                         <Card>
-                            <CardImg width="100%" src="https://reactstrap.github.io/assets/318x180.svg" alt="Card image cap" />
+                            <CardImg width="100%" src={image6} alt={localFood[item6].name} />
                             <CardBody>
                             <CardTitle>{localFood[item6].name}</CardTitle>
                                 <CardSubtitle>Calories: {localFood[item6].Calories}<br></br>Cost: ${localFood[item6].Cost}</CardSubtitle>

@@ -1,6 +1,9 @@
 import "./App.css";
 import "./images/fsf-header-logo@2x.png";
 import React from "react";
+import ReactDOM from 'react-dom';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import MapPage from './components/MapPage';
 import {
   BrowserRouter as Router,

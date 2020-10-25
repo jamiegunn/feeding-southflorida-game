@@ -42,7 +42,7 @@ class StepThree extends Component {
                                 <Button onClick={() => {
                                     console.log('context passed to StepOne', this.props.context);
                                     this.props.callback(localFood[item7].Cost, localFood[item7].Calories, this.props.context);
-                                    this.props.goToStep(2);
+                                    this.props.goToStep(4);
                                 }}>Select</Button>&nbsp;
                         <Button id="StepThreeItem7" title="Show Details">&#8226;&#8226;&#8226;</Button>
                                 <UncontrolledPopover placement="bottom" trigger="focus" placement="right" target="StepThreeItem7">
@@ -91,7 +91,7 @@ class StepThree extends Component {
                                 <Button onClick={() => {
                                     console.log('context passed to StepOne', this.props.context);
                                     this.props.callback(localFood[item8].Cost, localFood[item8].Calories, this.props.context);
-                                    this.props.goToStep(2);
+                                    this.props.goToStep(4);
                                 }}>Select</Button>&nbsp;
                         <Button id="StepThreeItem8" title="Show Details">&#8226;&#8226;&#8226;</Button>
                                 <UncontrolledPopover placement="bottom" trigger="focus" placement="right" target="StepThreeItem8">
@@ -140,7 +140,7 @@ class StepThree extends Component {
                                 <Button onClick={() => {
                                     console.log('context passed to StepOne', this.props.context);
                                     this.props.callback(localFood[item9].Cost, localFood[item9].Calories, this.props.context);
-                                    this.props.goToStep(2);
+                                    this.props.goToStep(4);
                                 }}>Select</Button>&nbsp;
                         <Button id="StepThreeItem9" title="Show Details">&#8226;&#8226;&#8226;</Button>
                                 <UncontrolledPopover placement="bottom" trigger="focus" placement="right" target="StepThreeItem9">

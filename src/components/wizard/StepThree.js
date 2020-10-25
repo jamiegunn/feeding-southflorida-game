@@ -43,6 +43,7 @@ class StepThree extends Component {
 
         return (
             <Container>
+				<div className="rowPadding" >
                 <Row>
                     <Col>
                         <Card>
@@ -191,6 +192,7 @@ class StepThree extends Component {
                         </Card>
                     </Col>
                 </Row>
+				</div>
 
 
             </Container>

@@ -27,6 +27,10 @@ body {
 	
 }
 
+.rowPadding {
+	margin-bottom: 10px; 	
+}
+
 .btn {
 	background-color: #FF7900!important;
 	border-radius: 30px!important;
@@ -46,7 +50,9 @@ body {
 .footerBottomBottomColor {
 	background-color: #BF5B00!important;
 }
-
+.modal-dialog {
+	max-width:700px!important;
+}
 .imageHalf{
 width: 100%;	
 }

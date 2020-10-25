@@ -20,7 +20,7 @@ class HomePage extends Component {
         const adults = People.map(user => { if(user.age >= 18) return user; }).filter(el => { return el !== null && el !== '' && el !== undefined; });
         const kids = People.map(user => { if(user.age < 18) return user; }).filter(el => { return el !== null && el !== '' && el !== undefined; });
 
-        const numAdults = Math.random() * 2 + 1; 
+        const numAdults = Math.random() + 0.5; 
         const numKids = Math.random() * 5; 		
 
         let adultsModal = [];
@@ -64,10 +64,14 @@ class HomePage extends Component {
         })
     }
 
-    modalCallback(c, foodBudget, gamerName){       
+    modalCallback(c, foodBudget, gamerName){  
+	var coinFlip = Math.random() * 10;
+	var extraMoney = 1;
+	if (coinFlip%2==0) extraMoney=2;
+	
         c.setState({
             showModal: false,
-            remainingBudget: foodBudget, 
+            remainingBudget: foodBudget * extraMoney, 
             caloriesRemaining: c.state.totalCaloricNeeds - c.state.caloriesPurchased,
             gamerName: gamerName
           });
@@ -113,8 +117,8 @@ class HomePage extends Component {
                             <div className="border" style={{ height: '100%', marginTop: 20 }}>
                                 <CardBody>
                                     <CardTitle>Our Family</CardTitle>
-                  Our family unit has {this.state.adultsModal.length} adults with caloric needs of {this.state.adultCals}.<br></br>
-                  Our family unit has {this.state.kidsModal.length} kids with caloric needs of {this.state.kidsCals}.<br></br><br></br>
+                  Our family unit has {this.state.adultsModal.length} adults with daily caloric needs of {this.state.adultCals}.<br></br>
+                  Our family unit has {this.state.kidsModal.length} kids with daily caloric needs of {this.state.kidsCals}.<br></br><br></br>
 									
                                     <Button onClick={() => {
                                         

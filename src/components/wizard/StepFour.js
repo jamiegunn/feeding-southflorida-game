@@ -20,7 +20,10 @@ class StepFour extends Component {
         console.log('this.props.context', this.props.context);
 		var FinalMessage = "";
 		if (this.props.remainingBudget < 0 || this.props.caloriesRemaining > 0) { 
-				FinalMessage = "I'm sorry " + this.props.gamerName + "! Have you contacted Feeding South Florida?  Through the generous contributions of their supporters they provided 99 million meals in the last year. "
+				FinalMessage = "I'm sorry " + this.props.gamerName + "! "
+				if (this.props.remainingBudget < 0) FinalMessage += "You exceeded your budget. " 
+				else FinalMessage += "You did not provide sufficient calories to sustain your family. " 
+				FinalMessage += "Have you contacted Feeding South Florida?  Through the generous contributions of their supporters they provided 99 million meals in the last year. "
 		} else {
 				FinalMessage = "Congratulations " + this.props.gamerName + "! You stayed within your budget and purchased enough food for our family. "
 		}		

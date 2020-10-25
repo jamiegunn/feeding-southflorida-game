@@ -48,6 +48,7 @@ class StepOne extends Component {
 
         return (
             <Container>
+				<div className="rowPadding" >
                 <Row>
                     <Col>
                         <Card>
@@ -195,7 +196,9 @@ class StepOne extends Component {
                             </CardBody>
                         </Card>
                     </Col>
+
                 </Row>
+				</div>
 
 
             </Container>

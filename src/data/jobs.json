@@ -8,5 +8,16 @@
 {"JobTitle":"Wine Corker", "Salary":14500, "WeeklyPay":279, "FoodBudget":31 },
 {"JobTitle":"jim", "Salary":32000, "WeeklyPay":615, "FoodBudget":68 },
 {"JobTitle":"cat", "Salary":16250, "WeeklyPay":313, "FoodBudget":34 },
-{"JobTitle":"Berry Picker", "Salary":25250, "WeeklyPay":486, "FoodBudget":53 }	
+{"JobTitle":"Berry Picker", "Salary":25250, "WeeklyPay":486, "FoodBudget":53 },
+{"JobTitle":"Barry Picker", "Salary":30000, "WeeklyPay":577, "FoodBudget":63 },
+{"JobTitle":"Beary Picker", "Salary":34500, "WeeklyPay":663, "FoodBudget":73 },
+{"JobTitle":"Coin Polisher", "Salary":26600, "WeeklyPay":512, "FoodBudget":56 },
+{"JobTitle":"Fact Maker", "Salary":35000, "WeeklyPay":673, "FoodBudget":74 },
+{"JobTitle":"Corn Shucker", "Salary":32500, "WeeklyPay":625, "FoodBudget":69 },
+{"JobTitle":"Bug Sitter", "Salary":24750, "WeeklyPay":476, "FoodBudget":52 },
+{"JobTitle":"Gym Leader", "Salary":32750, "WeeklyPay":630, "FoodBudget":69 },
+{"JobTitle":"Steam Catcher", "Salary":18950, "WeeklyPay":364, "FoodBudget":40 },
+{"JobTitle":"Potato Sniffer", "Salary":17450, "WeeklyPay":336, "FoodBudget":37 },
+{"JobTitle":"Borg", "Salary":40000, "WeeklyPay":769, "FoodBudget":85 },
+{"JobTitle":"Unemployed", "Salary":10000, "WeeklyPay":192, "FoodBudget":21 }
 ]

@@ -18,11 +18,19 @@ import {
 class StepFour extends Component {
     render() {
         console.log('this.props.context', this.props.context);
+		var FinalMessage = "";
+		if (this.props.remainingBudget < 0 || this.props.caloriesRemaining > 0) { 
+				FinalMessage = "I'm sorry " + this.props.gamerName + "! Have you contacted Feeding South Florida?  Through the generous contributions of their supporters they provided 99 million meals in the last year. "
+		} else {
+				FinalMessage = "Congratulations " + this.props.gamerName + "! You stayed within your budget and purchased enough food for our family. "
+		}		
+		
         return (
             <Container>
                 <Row>
                     <Col>
-                            Hello {this.props.gamerName}<br></br>
+					
+					{FinalMessage}	<br></br>
                             Total Spend: ${this.props.totalSpend}<br></br>
                             Remaining Budget: ${this.props.remainingBudget}<br></br>
                             Calories Purchased: {this.props.caloriesPurchased}<br></br>

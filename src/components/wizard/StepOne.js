@@ -30,7 +30,16 @@ class StepOne extends Component {
 		var item1 = Math.floor(Math.random() * localFood.length);
 		var item2 = Math.floor(Math.random() * localFood.length);
 		var item3 = Math.floor(Math.random() * localFood.length);
+		do {
+			item2 = Math.floor(Math.random() * localFood.length);
+		}
+		while (item2 == item1);
+		do {
+			item3 = Math.floor(Math.random() * localFood.length);
+		}
+		while (item3 == item1 || item3 == item2);
 
+		
 		var image1 = "./images/" + localFood[item1].ImageURL;
 		var image2 = "./images/" + localFood[item2].ImageURL;
 		var image3 = "./images/" + localFood[item3].ImageURL;

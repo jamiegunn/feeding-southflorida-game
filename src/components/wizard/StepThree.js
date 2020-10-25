@@ -26,7 +26,15 @@ class StepThree extends Component {
         var item7 = Math.floor(Math.random() * localFood.length);
 		var item8 = Math.floor(Math.random() * localFood.length);
 		var item9 = Math.floor(Math.random() * localFood.length);		
-
+		do {
+			item8 = Math.floor(Math.random() * localFood.length);
+		}
+		while (item8 == item7);
+		do {
+			item9 = Math.floor(Math.random() * localFood.length);
+		}
+		while (item9 == item7 || item9 == item8);
+		
 		var image7 = "./images/" + localFood[item7].ImageURL;
 		var image8 = "./images/" + localFood[item8].ImageURL;
 		var image9 = "./images/" + localFood[item9].ImageURL;

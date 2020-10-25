@@ -20,8 +20,8 @@ class HomePage extends Component {
         const adults = People.map(user => { if(user.age >= 18) return user; }).filter(el => { return el !== null && el !== '' && el !== undefined; });
         const kids = People.map(user => { if(user.age < 18) return user; }).filter(el => { return el !== null && el !== '' && el !== undefined; });
 
-        const numAdults = Math.random() * (5 - 1) + 1; 
-        const numKids = Math.random() * (5 - 1) + 1; 
+        const numAdults = Math.random() * 2 + 1; 
+        const numKids = Math.random() * 5; 		
 
         let adultsModal = [];
         let kidsModal = [];
@@ -42,18 +42,19 @@ class HomePage extends Component {
         let kidsCals = 0;
         kidsModal.map(kid => { if(kid && kid.caloricRequirements) kidsCals += kid.caloricRequirements });
 
-        const totalCaloricNeeds = adultCals + kidsCals;
+        const totalCaloricNeeds = (adultCals + kidsCals) * 7;
 
         this.state = { totalSpend: 0, gamerName: 'Unknown', remainingBudget:0,  caloriesRemaining:0, caloriesPurchased:0, totalCaloricNeeds: totalCaloricNeeds, price: 0, showModal: true, jobs: Jobs, names: Names, adultsModal: adultsModal, kidsModal:kidsModal, adultCals:adultCals, kidsCals: kidsCals };
     }
 
     callback(cost, calories, context){
-        
-        const totalSpend = context.state.totalSpend + cost;
-        const caloriesPurchased = context.state.caloriesPurchased + calories;
+		
+        var familySize = context.state.adultsModal.length + context.state.kidsModal.length; 
+        const totalSpend = context.state.totalSpend + (cost * 7 * familySize);
+        const caloriesPurchased = context.state.caloriesPurchased + (calories * 7 * familySize);
         const caloriesRemaining = context.state.totalCaloricNeeds - caloriesPurchased;
-        const remainingBudget = context.state.remainingBudget - totalSpend; 
-
+        const remainingBudget = context.state.remainingBudget - (cost * 7 * familySize); 
+		console.log('familySize', familySize);	
 
         context.setState({
             totalSpend: totalSpend,
@@ -87,7 +88,7 @@ class HomePage extends Component {
                                 <CardBody>
                                     <CardTitle>Summary Running Detail</CardTitle>
                                     <CardBody>
-                                    Total Spend: ${this.state.totalSpend}<br></br>
+                                    Total Spent: ${this.state.totalSpend}<br></br>
                                     Remaining Budget: ${this.state.remainingBudget}<br></br>
                                     Calories Purchased: {this.state.caloriesPurchased}<br></br>
                                     Calories Remaining: {this.state.caloriesRemaining}<br></br>
@@ -111,13 +112,13 @@ class HomePage extends Component {
                         <Col md="4">
                             <div className="border" style={{ height: '100%', marginTop: 20 }}>
                                 <CardBody>
-                                    <CardTitle>Family Info</CardTitle>
-                  Hello {this.state.gamerName}<br></br><br></br>
+                                    <CardTitle>Our Family</CardTitle>
                   Our family unit has {this.state.adultsModal.length} adults with caloric needs of {this.state.adultCals}.<br></br>
                   Our family unit has {this.state.kidsModal.length} kids with caloric needs of {this.state.kidsCals}.<br></br><br></br>
 									
                                     <Button onClick={() => {
                                         
+										window.history.go(0);
                                         this.setState({
                                             showModal: true
                                           });

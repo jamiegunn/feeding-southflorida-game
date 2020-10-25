@@ -26,7 +26,15 @@ class StepTwo extends Component {
 		var item4 = Math.floor(Math.random() * localFood.length);
 		var item5 = Math.floor(Math.random() * localFood.length);
 		var item6 = Math.floor(Math.random() * localFood.length);		
-
+		do {
+			item5 = Math.floor(Math.random() * localFood.length);
+		}
+		while (item5 == item4);
+		do {
+			item6 = Math.floor(Math.random() * localFood.length);
+		}
+		while (item6 == item4 || item6 == item5);
+		
 		var image4 = "./images/" + localFood[item4].ImageURL;
 		var image5 = "./images/" + localFood[item5].ImageURL;
 		var image6 = "./images/" + localFood[item6].ImageURL;

@@ -3,6 +3,7 @@ import StepWizard from 'react-step-wizard';
 import StepOne from './wizard/StepOne';
 import StepTwo from './wizard/StepTwo';
 import StepThree from './wizard/StepThree';
+import StepFour from './wizard/StepFour';
 import CoolNav from './CoolNav';
 import ModalPage from './ModalPage';
 import { CardBody, CardTitle, Button, Container, Row, Col } from 'reactstrap';
@@ -43,7 +44,7 @@ class HomePage extends Component {
 
         const totalCaloricNeeds = adultCals + kidsCals;
 
-        this.state = { totalSpend: 0, remainingBudget:0,  caloriesRemaining:0, caloriesPurchased:0, totalCaloricNeeds: totalCaloricNeeds, price: 0, showModal: true, jobs: Jobs, names: Names, adultsModal: adultsModal, kidsModal:kidsModal, adultCals:adultCals, kidsCals: kidsCals };
+        this.state = { totalSpend: 0, gamerName: 'Unknown', remainingBudget:0,  caloriesRemaining:0, caloriesPurchased:0, totalCaloricNeeds: totalCaloricNeeds, price: 0, showModal: true, jobs: Jobs, names: Names, adultsModal: adultsModal, kidsModal:kidsModal, adultCals:adultCals, kidsCals: kidsCals };
     }
 
     callback(cost, calories, context){
@@ -62,11 +63,12 @@ class HomePage extends Component {
         })
     }
 
-    modalCallback(c, foodBudget){       
+    modalCallback(c, foodBudget, gamerName){       
         c.setState({
             showModal: false,
             remainingBudget: foodBudget, 
-            caloriesRemaining: c.state.totalCaloricNeeds - c.state.caloriesPurchased
+            caloriesRemaining: c.state.totalCaloricNeeds - c.state.caloriesPurchased,
+            gamerName: gamerName
           });
     }
 
@@ -99,6 +101,7 @@ class HomePage extends Component {
                                     <StepOne food={Food} callback={this.callback} context={this} />
                                     <StepTwo food={Food} callback={this.callback} context={this} />
                                     <StepThree food={Food} callback={this.callback} context={this} />
+                                    <StepFour gamerName = {this.state.gamerName} totalSpend = {this.state.totalSpend} remainingBudget = {this.state.remainingBudget} caloriesPurchased = {this.state.caloriesPurchased} caloriesRemaining = {this.state.caloriesRemaining} context={this} />
                                 </StepWizard>
                             </div>
                         </Col>

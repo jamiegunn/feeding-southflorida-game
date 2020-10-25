@@ -41,7 +41,7 @@ class ModalPage extends Component {
                 </ModalBody>
                 <ModalFooter>
                 <Button color = "primary" onClick={() => {
-                            this.props.callback(this.props.context, jobItem.FoodBudget)
+                            this.props.callback(this.props.context, jobItem.FoodBudget, name)
                         }}>Ok</Button>&nbsp;
                 </ModalFooter>
               </Modal>

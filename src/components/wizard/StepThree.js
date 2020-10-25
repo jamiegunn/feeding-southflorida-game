@@ -38,7 +38,7 @@ class StepThree extends Component {
                                 <Button onClick={() => {
                                     console.log('context passed to StepTwo', this.props.context);
                                     this.props.callback(localFood[0].Cost, localFood[0].Calories, this.props.context);
-                                
+                                    this.props.goToStep(4);
                                 }}>Finish</Button>&nbsp;
                         <Button id="StepOneItem1">Show Details</Button>
                                 <UncontrolledPopover placement="bottom" trigger="focus" placement="right" target="StepOneItem1">
@@ -87,9 +87,9 @@ class StepThree extends Component {
                                 <Button onClick={() => {
                                     console.log('context passed to StepTwo', this.props.context);
                                     this.props.callback(localFood[1].Cost, localFood[1].Calories, this.props.context);
-                                
+                                    this.props.goToStep(4);
                                 }}>Finish</Button>&nbsp;
-                                <Button onClick={() => this.props.goToStep(2)}>Show Details</Button>
+                                <Button>Show Details</Button>
                             </CardBody>
                         </Card>
                     </Col>
@@ -104,8 +104,9 @@ class StepThree extends Component {
                                 <Button onClick={() => {
                                     console.log('context passed to StepTwo', this.props.context);
                                     this.props.callback(localFood[2].Cost, localFood[2].Calories, this.props.context);
+                                    this.props.goToStep(4);
                                 }}>Finish</Button>&nbsp;
-                                <Button onClick={() => this.props.goToStep(2)}>Show Details</Button>
+                                <Button>Show Details</Button>
                             </CardBody>
                         </Card>
                     </Col>

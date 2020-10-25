@@ -44,7 +44,7 @@ class StepTwo extends Component {
                                     this.props.callback(localFood[item4].Cost, localFood[item4].Calories, this.props.context);
                                     this.props.goToStep(2);
                                 }}>Select</Button>&nbsp;
-                        <Button id="StepTwoItem4">Show Details</Button>
+                        <Button id="StepTwoItem4" title="Show Details">&#8226;&#8226;&#8226;</Button>
                                 <UncontrolledPopover placement="bottom" trigger="focus" placement="right" target="StepTwoItem4">
                                     <PopoverHeader>{localFood[item4].name}</PopoverHeader>
                                     <PopoverBody><table>
@@ -93,7 +93,7 @@ class StepTwo extends Component {
                                     this.props.callback(localFood[item5].Cost, localFood[item5].Calories, this.props.context);
                                     this.props.goToStep(2);
                                 }}>Select</Button>&nbsp;
-                        <Button id="StepTwoItem5">Show Details</Button>
+                        <Button id="StepTwoItem5" title="Show Details">&#8226;&#8226;&#8226;</Button>
                                 <UncontrolledPopover placement="bottom" trigger="focus" placement="right" target="StepTwoItem5">
                                     <PopoverHeader>{localFood[item5].name}</PopoverHeader>
                                     <PopoverBody><table>
@@ -142,7 +142,7 @@ class StepTwo extends Component {
                                     this.props.callback(localFood[item6].Cost, localFood[item6].Calories, this.props.context);
                                     this.props.goToStep(2);
                                 }}>Select</Button>&nbsp;
-                        <Button id="StepTwoItem6">Show Details</Button>
+                        <Button id="StepTwoItem6" title="Show Details">&#8226;&#8226;&#8226;</Button>
                                 <UncontrolledPopover placement="bottom" trigger="focus" placement="right" target="StepTwoItem6">
                                     <PopoverHeader>{localFood[item6].name}</PopoverHeader>
                                     <PopoverBody><table>

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 class CoolNav extends Component {
   render() {
-    return <div>Cool Nav</div>;
+    return <div className="coolNavTitle">Please select a menu option:</div>;
   }
 }
 

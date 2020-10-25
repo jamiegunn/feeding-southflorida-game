@@ -44,7 +44,7 @@ class StepThree extends Component {
                                     this.props.callback(localFood[item7].Cost, localFood[item7].Calories, this.props.context);
                                     this.props.goToStep(2);
                                 }}>Select</Button>&nbsp;
-                        <Button id="StepThreeItem7">Show Details</Button>
+                        <Button id="StepThreeItem7" title="Show Details">&#8226;&#8226;&#8226;</Button>
                                 <UncontrolledPopover placement="bottom" trigger="focus" placement="right" target="StepThreeItem7">
                                     <PopoverHeader>{localFood[item7].name}</PopoverHeader>
                                     <PopoverBody><table>
@@ -93,7 +93,7 @@ class StepThree extends Component {
                                     this.props.callback(localFood[item8].Cost, localFood[item8].Calories, this.props.context);
                                     this.props.goToStep(2);
                                 }}>Select</Button>&nbsp;
-                        <Button id="StepThreeItem8">Show Details</Button>
+                        <Button id="StepThreeItem8" title="Show Details">&#8226;&#8226;&#8226;</Button>
                                 <UncontrolledPopover placement="bottom" trigger="focus" placement="right" target="StepThreeItem8">
                                     <PopoverHeader>{localFood[item8].name}</PopoverHeader>
                                     <PopoverBody><table>
@@ -142,7 +142,7 @@ class StepThree extends Component {
                                     this.props.callback(localFood[item9].Cost, localFood[item9].Calories, this.props.context);
                                     this.props.goToStep(2);
                                 }}>Select</Button>&nbsp;
-                        <Button id="StepThreeItem9">Show Details</Button>
+                        <Button id="StepThreeItem9" title="Show Details">&#8226;&#8226;&#8226;</Button>
                                 <UncontrolledPopover placement="bottom" trigger="focus" placement="right" target="StepThreeItem9">
                                     <PopoverHeader>{localFood[item9].name}</PopoverHeader>
                                     <PopoverBody><table>

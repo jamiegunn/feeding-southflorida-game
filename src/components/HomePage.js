@@ -132,7 +132,7 @@ class HomePage extends Component {
 									<li>1 in 5 adults and 1 in 4 children in South Florida (Palm Beach, Broward, Miami-Dade, and Monroe) are food insecure.</li>
 									<li>We distributed 119 million pounds of food (over 99 million meals!) in the last year.</li>
 									<li>Over 40% of people seeking help since COVID-19 began are doing so for the first time.</li>
-									<li>Learn more at www.feedingsouthflorida.org</li>
+									<li>Learn more at <a href ="https://www.feedingsouthflorida.org" target = "_blank">www.feedingsouthflorida.org</a>!</li>
 									</ul>
                                     <a href ="https://feedingsouthflorida.org/donate-now/" target = "_blank" class="btn">Donate Now!</a>
                                 </CardBody>

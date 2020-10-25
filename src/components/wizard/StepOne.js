@@ -1,4 +1,7 @@
 import React, { Component } from "react";
+import ReactDOM from 'react-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 import {
     Card,
     CardImg,
@@ -45,7 +48,7 @@ class StepOne extends Component {
                                     this.props.callback(localFood[item1].Cost, localFood[item1].Calories, this.props.context);
                                     this.props.goToStep(2);
                                 }}>Select</Button>&nbsp;
-                        <Button id="StepOneItem1">Show Details</Button>
+                        <Button id="StepOneItem1">Show Details<FontAwesomeIcon icon="faInfoCircle" /></Button>
                                 <UncontrolledPopover placement="bottom" trigger="focus" placement="right" target="StepOneItem1">
                                     <PopoverHeader>{localFood[item1].name}</PopoverHeader>
                                     <PopoverBody><table>
@@ -143,7 +146,7 @@ class StepOne extends Component {
                                     this.props.callback(localFood[item3].Cost, localFood[item3].Calories, this.props.context);
                                     this.props.goToStep(2);
                                 }}>Select</Button>&nbsp;
-                        <Button id="StepOneItem3">Show Details</Button>
+                        <Button id="StepOneItem3">Show Details<FontAwesomeIcon icon="info-circle" /></Button>
                                 <UncontrolledPopover placement="bottom" trigger="focus" placement="right" target="StepOneItem3">
                                     <PopoverHeader>{localFood[item3].name}</PopoverHeader>
                                     <PopoverBody><table>

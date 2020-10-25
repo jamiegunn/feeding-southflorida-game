@@ -14,9 +14,6 @@ class ModalPage extends Component {
 
     render() {      
 
-        //console.log(this.props.adultsModal);
-        //console.log(this.props.kidsModal);
-
         const males = this.props.names.map(user => { if(user.gender === 'Male') return user; }).filter(el => { return el !== null && el !== '' && el !== undefined; });
         const females = this.props.names.map(user => { if(user.gender === 'Male') return user; }).filter(el => { return el !== null && el !== '' && el !== undefined; });
 
@@ -38,13 +35,13 @@ class ModalPage extends Component {
                 <ModalHeader>Family Info</ModalHeader>
                 <ModalBody>
                   Welcome, {name} <br></br>
-                  You are a {jobItem.JobTitle} with a salary of {jobItem.Salary} and a weekly food budget of ${jobItem.FoodBudget}<br></br><br></br>
+                  You are a {jobItem.JobTitle} with a salary of ${jobItem.Salary} and a weekly food budget of ${jobItem.FoodBudget}<br></br><br></br>
                   Our family unit has {this.props.adultsModal.length} adults with caloric needs of {this.props.adultCals}.<br></br>
                   Our family unit has {this.props.kidsModal.length} kids with caloric needs of {this.props.kidsCals}.<br></br>
                 </ModalBody>
                 <ModalFooter>
                 <Button color = "primary" onClick={() => {
-                            this.props.callback(this.props.context)
+                            this.props.callback(this.props.context, jobItem.FoodBudget)
                         }}>Ok</Button>&nbsp;
                 </ModalFooter>
               </Modal>

@@ -37,7 +37,7 @@ class StepTwo extends Component {
                                 <CardText>{localFood[0].FunFact}</CardText>
                                 <Button onClick={() => {
                                     console.log('context passed to StepTwo', this.props.context);
-                                    this.props.callback(1, this.props.context);
+                                    this.props.callback(localFood[0].Cost, localFood[0].Calories, this.props.context);
                                     this.props.goToStep(3);
                                 }}>Select</Button>&nbsp;
                         <Button id="StepOneItem1">Show Details</Button>
@@ -86,10 +86,10 @@ class StepTwo extends Component {
                                 <CardText>{localFood[1].FunFact}</CardText>
                                 <Button onClick={() => {
                                     console.log('context passed to StepTwo', this.props.context);
-                                    this.props.callback(1, this.props.context);
+                                    this.props.callback(localFood[1].Cost, localFood[1].Calories, this.props.context);
                                     this.props.goToStep(3);
                                 }}>Select</Button>&nbsp;
-                                     <Button onClick={() => this.props.goToStep(2)}>Show Details</Button>
+                                    <Button>Show Details</Button>
                             </CardBody>
                         </Card>
                     </Col>
@@ -103,10 +103,10 @@ class StepTwo extends Component {
                                 <CardText>{localFood[2].FunFact}</CardText>
                                 <Button onClick={() => {
                                     console.log('context passed to StepTwo', this.props.context);
-                                    this.props.callback(1, this.props.context);
+                                    this.props.callback(localFood[2].Cost, localFood[2].Calories, this.props.context);
                                     this.props.goToStep(3);
                                 }}>Select</Button>&nbsp;
-                                     <Button onClick={() => this.props.goToStep(2)}>Show Details</Button>
+                                     <Button>Show Details</Button>
                             </CardBody>
                         </Card>
                     </Col>

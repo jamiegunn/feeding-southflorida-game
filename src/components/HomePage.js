@@ -41,20 +41,32 @@ class HomePage extends Component {
         let kidsCals = 0;
         kidsModal.map(kid => { if(kid && kid.caloricRequirements) kidsCals += kid.caloricRequirements });
 
-        this.state = { price: 0, showModal: true, jobs: Jobs, names: Names, adultsModal: adultsModal, kidsModal:kidsModal, adultCals:adultCals, kidsCals: kidsCals };
+        const totalCaloricNeeds = adultCals + kidsCals;
+
+        this.state = { totalSpend: 0, remainingBudget:0,  caloriesRemaining:0, caloriesPurchased:0, totalCaloricNeeds: totalCaloricNeeds, price: 0, showModal: true, jobs: Jobs, names: Names, adultsModal: adultsModal, kidsModal:kidsModal, adultCals:adultCals, kidsCals: kidsCals };
     }
 
-    callback(value, context){
-        const price = context.state.price + value;
+    callback(cost, calories, context){
         
+        const totalSpend = context.state.totalSpend + cost;
+        const caloriesPurchased = context.state.caloriesPurchased + calories;
+        const caloriesRemaining = context.state.totalCaloricNeeds - caloriesPurchased;
+        const remainingBudget = context.state.remainingBudget - totalSpend; 
+
+
         context.setState({
-            price: price
+            totalSpend: totalSpend,
+            caloriesPurchased: caloriesPurchased,
+            caloriesRemaining: caloriesRemaining,
+            remainingBudget: remainingBudget
         })
     }
 
-    modalCallback(c){       
+    modalCallback(c, foodBudget){       
         c.setState({
-            showModal: false
+            showModal: false,
+            remainingBudget: foodBudget, 
+            caloriesRemaining: c.state.totalCaloricNeeds - c.state.caloriesPurchased
           });
     }
 
@@ -68,23 +80,20 @@ class HomePage extends Component {
             <div style={{ marginTop: 20 }}>
                 <Container>
                     <Row>
-                        <Col md="3">
+                        <Col md="4">
                             <div className="border" style={{ height: '100%' }}>
                                 <CardBody>
                                     <CardTitle>Summary Running Detail</CardTitle>
                                     <CardBody>
-                                    Total Spend 
-                                    $ 20
-                                    Remaining 
-                                    $ 5
-                                    Calories Puchased
-                                    4000
-                                    <span>{this.state.price}</span>
+                                    Total Spend: ${this.state.totalSpend}<br></br>
+                                    Remaining Budget: ${this.state.remainingBudget}<br></br>
+                                    Calories Purchased: {this.state.caloriesPurchased}<br></br>
+                                    Calories Remaining: {this.state.caloriesRemaining}<br></br>
                                     </CardBody>
                                 </CardBody>
                             </div>
                         </Col>
-                        <Col md="9">
+                        <Col md="8">
                             <div className="border" style={{ height: '100%' }}>
                                 <StepWizard nav={<CoolNav />}>
                                     <StepOne food={Food} callback={this.callback} context={this} />
@@ -96,7 +105,7 @@ class HomePage extends Component {
                     </Row>
 
                     <Row>
-                        <Col md="3">
+                        <Col md="4">
                             <div className="border" style={{ height: '100%', marginTop: 20 }}>
                                 <CardBody>
                                     <CardTitle>Family Info / Who Goes Hungry</CardTitle>
@@ -110,7 +119,7 @@ class HomePage extends Component {
                                 </CardBody>
                             </div>
                         </Col>
-                        <Col md="9">
+                        <Col md="8">
                             <div className="border" style={{ height: '100%', marginTop: 20 }}>
                                 <CardBody>
                                     <CardTitle>Did you know?</CardTitle>

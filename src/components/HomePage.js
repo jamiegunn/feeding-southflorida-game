@@ -126,6 +126,10 @@ class HomePage extends Component {
                             <div className="border" style={{ height: '100%', marginTop: 20 }}>
                                 <CardBody>
                                     <CardTitle>Did you know?</CardTitle>
+									<ul>
+									<li>$1 donated to Feeding South Florida = 9 meals for hungry families. </li>
+									<li>Other useful tips and tricks for saving money and planning meals to appear here. </li>
+									</ul>
                                     <a href ="https://feedingsouthflorida.org/donate-now/" target = "_blank" class="btn">Donate Now!</a>
                                 </CardBody>
                             </div>

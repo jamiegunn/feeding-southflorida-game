@@ -111,14 +111,18 @@ class HomePage extends Component {
                         <Col md="4">
                             <div className="border" style={{ height: '100%', marginTop: 20 }}>
                                 <CardBody>
-                                    <CardTitle>Family Info / Who Goes Hungry</CardTitle>
+                                    <CardTitle>Family Info</CardTitle>
+                  Hello {this.state.gamerName}<br></br><br></br>
+                  Our family unit has {this.state.adultsModal.length} adults with caloric needs of {this.state.adultCals}.<br></br>
+                  Our family unit has {this.state.kidsModal.length} kids with caloric needs of {this.state.kidsCals}.<br></br><br></br>
+									
                                     <Button onClick={() => {
                                         
                                         this.setState({
                                             showModal: true
                                           });
 
-                                        }}>Show My Family</Button>&nbsp; 
+                                        }}>Start Over</Button>&nbsp; 
                                 </CardBody>
                             </div>
                         </Col>

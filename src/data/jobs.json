@@ -1,5 +1,12 @@
 [
-    {"JobTitle":"bob", "Salary":15000, "WeeklyPay":288, "FoodBudget":3132 },
-    {"JobTitle":"sander", "Salary":18000, "WeeklyPay":346, "FoodBudget":1980 },
-    {"JobTitle":"plumber", "Salary":12000, "WeeklyPay":230, "FoodBudget":1320 }
+{"JobTitle":"bob", "Salary":15000, "WeeklyPay":288, "FoodBudget":32 },
+{"JobTitle":"sander", "Salary":18000, "WeeklyPay":346, "FoodBudget":38 },
+{"JobTitle":"plumber", "Salary":12000, "WeeklyPay":231, "FoodBudget":25 },
+{"JobTitle":"Janitor", "Salary":13500, "WeeklyPay":260, "FoodBudget":29 },
+{"JobTitle":"cheese", "Salary":10205, "WeeklyPay":196, "FoodBudget":22 },
+{"JobTitle":"Cactus Juice Salesmen", "Salary":23000, "WeeklyPay":442, "FoodBudget":49 },
+{"JobTitle":"Wine Corker", "Salary":14500, "WeeklyPay":279, "FoodBudget":31 },
+{"JobTitle":"jim", "Salary":32000, "WeeklyPay":615, "FoodBudget":68 },
+{"JobTitle":"cat", "Salary":16250, "WeeklyPay":313, "FoodBudget":34 },
+{"JobTitle":"Berry Picker", "Salary":25250, "WeeklyPay":486, "FoodBudget":53 }	
 ]
